@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.card{
+    display:grid;
+    place-items:center;
+    margin-top:20vh;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.heading{
+    display:flex;
+    justify-content:space-between;
+}
+
+.toggle{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.display{
+    width:500px;
+    height:85px;
+}
+
+.display input{
+    width:500px;
+    height:85px;
+    border-radius:5px;
+    background:blue;
+}
+
+.keypad{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    gap:20px;
+    padding:20px;
+    background:yellow;
+    border-radius:5px;
+}
+
+.input{
+    width:100px;
+    height:50px;
+    border-radius:10px;
+}
