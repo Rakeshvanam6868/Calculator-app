@@ -16,33 +16,36 @@
         <h3>Calc</h3>
         <div class="toggle">
           <p>THEME</p>
-          <input type="checkbox" name="" id="">
+          <div class="wrapper">
+            <input type="range" name="points" onchange="filterme(this.value);" min="1" step="1" id="custom-toggle" class="tgl-def" max="3" value="2">
+          </div>
         </div>
       </div>
         <div class="display">
-          <input type="text" name="" id="">
+          <input type="text" name="" id="output" disabled>
         </div>
         <div class="keypad">
-          <button class="input">7</button>
-          <button class="input">8</button>
-          <button class="input">9</button>
-          <button class="input reset">DEL</button>
-          <button class="input">4</button>
-          <button class="input">5</button>
-          <button class="input">6</button>
-          <button class="input">+</button>
-          <button class="input">1</button>
-          <button class="input">2</button>
-          <button class="input">3</button>
-          <button class="input">-</button>
-          <button class="input">.</button>
-          <button class="input">0</button>
-          <button class="input">/</button>
-          <button class="input">x</button>
-          <button class="result reset">RESET</button>
-          <button class="result">=</button>
+          <button class="input input-btn" data-value="7">7</button>
+          <button class="input input-btn" data-value="8">8</button>
+          <button class="input input-btn" data-value="9">9</button>
+          <button class="input reset " id="del">DEL</button>
+          <button class="input input-btn" data-value="4">4</button>
+          <button class="input input-btn" data-value="5">5</button>
+          <button class="input input-btn" data-value="6">6</button>
+          <button class="input input-btn" data-value="+">+</button>
+          <button class="input input-btn" data-value="1">1</button>
+          <button class="input input-btn" data-value="2">2</button>
+          <button class="input input-btn" data-value="3">3</button>
+          <button class="input input-btn" data-value="-">-</button>
+          <button class="input input-btn" data-value=".">.</button>
+          <button class="input input-btn" data-value="0">0</button>
+          <button class="input input-btn " data-value="/">/</button>
+          <button class="input input-btn" data-value="*">x</button>
+          <button id="remove" class="input result reset" >RESET</button>
+          <button id="solution" class="input result equal" >=</button>
         </div>
     </div>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -1,56 +1,148 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.card{
-    display:grid;
-    place-items:center;
-    margin-top:20vh;
+body {
+    background: var(--main-bg);
 }
 
-.container{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+.card {
+    display: grid;
+    place-items: center;
+    margin-top: 15vh;
 }
 
-.heading{
-    display:flex;
-    justify-content:space-between;
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.toggle{
-    display:flex;
-    gap:10px;
-    align-items:center;
+.heading {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 700;
 }
 
-.display{
-    width:500px;
-    height:85px;
+.toggle {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
-.display input{
-    width:500px;
-    height:85px;
-    border-radius:5px;
-    background:blue;
+.toggle p {
+    font-size: 13px;
 }
 
-.keypad{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr 1fr;
-    gap:20px;
-    padding:20px;
-    background:yellow;
-    border-radius:5px;
+.display {
+    margin-top: 10px;
+    width: 500px;
+    height: 85px;
+    border: none;
 }
 
-.input{
-    width:100px;
-    height:50px;
-    border-radius:10px;
+.display input {
+    width: 100%;
+    height: 85px;
+    border-radius: 10px;
+    border: none;
+    background: var(--screen-bg);
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: right;
+    padding: 10px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background: var(--keypad-bg);
+    border-radius: 10px;
+}
+
+.input {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 4px solid var(--key-shadow);
+    background: var(--key-bg);
+    color: var(--key-text-color);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.result {
+    grid-column: span 2;
+    width: 220px;
+}
+
+.reset {
+    background: var(--reset-bg);
+    border-bottom: 4px solid var(--reset-shadow);
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.equal {
+    background: var(--equal-bg);
+    border-bottom: 4px solid var(--equal-shadow);
+    color: var(--text-color);
+}
+
+/* Theme 1 */
+:root {
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --key-bg: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --reset-bg: hsl(225, 21%, 49%);
+    --reset-shadow: hsl(224, 28%, 35%);
+    --equal-bg: hsl(6, 63%, 50%);
+    --equal-shadow: hsl(6, 70%, 34%);
+    --text-color: hsl(0, 0%, 100%);
+    --key-text-color: hsl(221, 14%, 31%);
+}
+
+/* Theme 2 */
+body.theme2 {
+    --main-bg: hsl(0, 0%, 90%);
+    --keypad-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --key-bg: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --reset-bg: hsl(185, 42%, 37%);
+    --reset-shadow: hsl(185, 58%, 25%);
+    --equal-bg: hsl(25, 98%, 40%);
+    --equal-shadow: hsl(25, 99%, 27%);
+    --text-color: black;
+    --key-text-color: hsl(60, 10%, 19%);
+}
+
+/* Theme 3 */
+body.theme3 {
+    --main-bg: hsl(268, 75%, 9%);
+    --keypad-bg: hsl(268, 71%, 12%);
+    --screen-bg: hsl(268, 71%, 12%);
+    --key-bg: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    --reset-bg: hsl(281, 89%, 26%);
+    --reset-shadow: hsl(285, 91%, 52%);
+    --equal-bg: hsl(176, 100%, 44%);
+    --equal-shadow: hsl(177, 92%, 70%);
+    --text-color: hsl(0, 0%, 100%);
+    --key-text-color: hsl(52, 100%, 62%);
 }
