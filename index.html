@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.PNG">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Calculator app</title>
+  <title>Calculator app</title>
  
 </head>
 <body>
   <div class="card">
     <div class="container">
       <div class="heading">
-        <h3>Calc</h3>
+        <h3>calc</h3>
         <div class="toggle">
           <p>THEME</p>
           <div class="wrapper">
-            <input type="range" name="points" onchange="filterme(this.value);" min="1" step="1" id="custom-toggle" class="tgl-def" max="3" value="2">
+            <div class="numbers"><p>1</p>
+              <p>2</p>
+              <p>3</p></div>
+            <input type="range" name="points" min="1" step="1" id="custom-toggle" class="tgl-def" max="3" value="2">
           </div>
         </div>
       </div>
@@ -45,6 +48,11 @@
           <button id="solution" class="input result equal" >=</button>
         </div>
     </div>
+  </div>
+
+  <div class="footer">
+    <p>Developed by <span><a href="https://rakesh-portfolio-alpha.vercel.app/">Rakesh Vanam</a></span> </p>
+    <img src="./images/logo.PNG" alt="">
   </div>
   <script src="index.js"></script>
 </body>

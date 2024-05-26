@@ -14,21 +14,29 @@ body {
 .card {
     display: grid;
     place-items: center;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .heading {
     display: flex;
     justify-content: space-between;
+    align-items:center;
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
+}
+
+.numbers{
+    display:flex;
+    padding:2px 5px;
+    gap:15px;
+    font-size: 5px;
 }
 
 .toggle {
@@ -41,6 +49,41 @@ body {
 .toggle p {
     font-size: 13px;
 }
+
+.wrapper{
+    margin-bottom:15px;
+}
+
+  
+  #custom-toggle {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 60px;
+    background-color:var(--keypad-bg);
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding:4px;
+    margin: 0;
+    cursor: pointer;
+    color:red;
+  }
+  #custom-toggle.tgl-def::-webkit-slider-thumb {
+    background-color:var(--equal-bg);
+  }
+
+  #custom-toggle::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+  }
+  #custom-toggle:focus {
+    outline: none;
+  }
+  
 
 .display {
     margin-top: 10px;
@@ -69,6 +112,7 @@ body {
     padding: 20px;
     background: var(--keypad-bg);
     border-radius: 10px;
+    align-items:center;
 }
 
 .input {
@@ -82,7 +126,13 @@ body {
     font-size: 32px;
     font-weight: 700;
     text-align: center;
+    cursor:pointer;
 }
+
+.input:hover {
+    background: var(--key-hover);
+}
+
 
 .result {
     grid-column: span 2;
@@ -92,14 +142,22 @@ body {
 .reset {
     background: var(--reset-bg);
     border-bottom: 4px solid var(--reset-shadow);
-    color: var(--text-color);
+    color: var(--reset-text-color);
     font-size: 25px;
+}
+
+.reset:hover {
+    background: var(--reset-hover);
 }
 
 .equal {
     background: var(--equal-bg);
     border-bottom: 4px solid var(--equal-shadow);
-    color: var(--text-color);
+    color: var(--equal-text-color);
+}
+
+.equal:hover {
+    background: var(--equal-hover);
 }
 
 /* Theme 1 */
@@ -115,6 +173,11 @@ body {
     --equal-shadow: hsl(6, 70%, 34%);
     --text-color: hsl(0, 0%, 100%);
     --key-text-color: hsl(221, 14%, 31%);
+    --equal-text-color:hsl(0, 0%, 90%);
+    --reset-text-color:hsl(0, 0%, 90%);
+    --key-hover:#F7F6F6;
+    --equal-hover:#D45547;
+    --reset-hover:#9AA2B9;
 }
 
 /* Theme 2 */
@@ -130,6 +193,11 @@ body.theme2 {
     --equal-shadow: hsl(25, 99%, 27%);
     --text-color: black;
     --key-text-color: hsl(60, 10%, 19%);
+    --equal-text-color:hsl(0, 0%, 90%);
+    --reset-text-color:hsl(0, 0%, 90%);
+    --key-hover:hsl(0, 0%, 93%);
+    --equal-hover:#DA7127;
+    --reset-hover:#55A7AF;
 }
 
 /* Theme 3 */
@@ -143,6 +211,80 @@ body.theme3 {
     --reset-shadow: hsl(285, 91%, 52%);
     --equal-bg: hsl(176, 100%, 44%);
     --equal-shadow: hsl(177, 92%, 70%);
-    --text-color: hsl(0, 0%, 100%);
+    --text-color: hsl(52, 100%, 62%);
     --key-text-color: hsl(52, 100%, 62%);
+    --equal-text-color:hsl(268, 75%, 9%);
+    --reset-text-color:hsl(0, 0%, 90%);
+    --key-hover:#502286;
+    --equal-hover:#8AF1EA;
+    --reset-hover:#741A9D;
+}
+
+@media (width < 431px){
+    .card {
+        margin-top:3vh;
+    }
+    
+    .container {
+        gap: 15px;
+        padding:25px;
+    }
+
+    .display {
+        margin-top: 5px;
+        width: 375px;
+    }
+
+    .display input {
+        width: 100%;
+    }
+
+    .input {
+        width: 70px;
+        height: 70px;
+    }
+
+    .result {
+        grid-column: span 2;
+        width:160px;
+    }
+
+    .keypad {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .footer img{
+        width:7%;
+        height:7%;
+    }
+}
+
+.footer{
+    margin-top:50px;
+    text-align:center;
+    color:var(--reset-bg);
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    align-items:center;
+    font-size:22px;
+}
+
+.footer img{
+    width:2%;
+    height:2%;
+    border-radius:50%;
+}
+
+.footer a{
+    color:var(--equal-bg);
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:var(--equal-hover);
+    text-decoration:none;
 }
